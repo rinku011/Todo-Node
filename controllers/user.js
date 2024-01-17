@@ -30,7 +30,7 @@ export const register = async(req,res,next)=>{
       const {email,password} = req.body;
 
     const user = await User.findOne({email}).select("+password");
-
+    
     if(!user) return next(new ErrorHandler("Invalid Credetial", 400));
 
      const isMatch = await bcrypt.compare(password, user.password);

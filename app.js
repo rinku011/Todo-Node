@@ -19,7 +19,7 @@ config({
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: 'https://todo-client-vqer.onrender.com',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: 'Content-Type',
   credentials: true,
