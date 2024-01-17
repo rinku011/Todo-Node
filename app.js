@@ -18,12 +18,7 @@ config({
 // middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: '*', // Allow access from any origin
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: "Content-Type",
-  credentials: true,
-}));
+app.use(cors())
 
 //using routes
 app.use("/api/v1/users", userRouter);
