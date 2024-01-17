@@ -19,10 +19,10 @@ config({
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin : [process.env.FRONTEND_URL],
-  methods : ["GET", "POST", "PUT", "DELETE"],
+  origin: '*', // Allow access from any origin
+  methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: "Content-Type",
-  credentials : true,
+  credentials: true,
 }));
 
 //using routes
